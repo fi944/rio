@@ -301,13 +301,13 @@ async def _(event):
 #المليار
 
 c = requests.session()
-bot_username = '@t06bot'
+bot_username3 = '@zmmbot'
 
 
 @sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.بوت المليار"))
 async def _(event):
     if ispay[0] == "yes":
-        await event.edit('t06bot')
+        await event.edit('zmmbot')
     else:
         await event.edit("يجب الدفع لاستعمال هذا الامر !")
 
@@ -317,12 +317,12 @@ async def _(event):
     if ispay[0] == "yes":
         await event.edit("حسنا, تأكد من انك مشترك ب قنوات الاشتراك الاجباري لتجنب الأخطأء (@R5RR5)")
         channel_entity = await sedthon.get_entity(bot_username)
-        await sedthon.send_message('@t06bot', '/start')
+        await sedthon.send_message('@zmmbot', '/start')
         await asyncio.sleep(2)
-        msg0 = await sedthon.get_messages('@t06bot', limit=1)
+        msg0 = await sedthon.get_messages('@zmmbot', limit=1)
         await msg0[0].click(2)
         await asyncio.sleep(7)
-        msg1 = await sedthon.get_messages('@t06bot', limit=1)
+        msg1 = await sedthon.get_messages('@zmmbot', limit=1)
         await msg1[0].click(0)
 
         chs = 1
@@ -344,7 +344,7 @@ async def _(event):
                 except:
                     bott = url.split('/')[-1]
                     await sedthon(ImportChatInviteRequest(bott))
-                msg2 = await sedthon.get_messages('@t06bot', limit=1)
+                msg2 = await sedthon.get_messages('@zmmbot', limit=1)
                 await msg2[0].click(text='تحقق')
                 chs += 1
                 await sedthon.send_message(event.chat_id, f"تم الاشتراك في {chs} قناة")
